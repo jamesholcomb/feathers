@@ -39,11 +39,11 @@ function cleanQuery (query, operators, filters) {
     const result = {};
     _.each(query, (value, key) => {
       if (key[0] === '$') {
-        if(filters[key] !== undefined) {
+        if (filters[key] !== undefined) {
           return;
         }
 
-        if(!operators.includes(key)) {
+        if (!operators.includes(key)) {
           throw new BadRequest(`Invalid query parameter ${key}`, query);
         }
       }

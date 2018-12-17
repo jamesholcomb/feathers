@@ -176,7 +176,7 @@ describe('@feathersjs/adapter-commons/filterQuery', () => {
       try {
         filterQuery({ $select: 1, $known: 1 });
         assert.ok(false, 'Should never get here');
-      } catch(error) {
+      } catch (error) {
         assert.strictEqual(error.message, 'Invalid query parameter $known');
       }
     });
